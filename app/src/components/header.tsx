@@ -17,7 +17,7 @@ export default function Header(props:any) {
 <nav className="p-4 lg:p-6 flex justify-between shadow sticky">
   <div className="flex">
   <Link href="/">
-    <p className={`text-3xl ${danceScript.className} hover:text-brandBlueLight`}>DecoVision</p>
+    <p className={`text-3xl ${danceScript.className} hover:text-brandBlueLight`}>RoomRemix</p>
   </Link>
   </div>
   <button className={`btn rounded-md px-4 py-2 bg-brandBlue hover:opacity-75 active:opacity-50 text-primaryWhite text-sm disabled:text-primaryWhite disabled:bg-gray-700 disabled:pointer-events-none`} disabled={props.disabled} onClick={() => props.generate()}>

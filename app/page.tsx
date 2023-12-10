@@ -29,8 +29,8 @@ export default function Home() {
   const makeApiCall = () => {
     setLoader(true);
     const formData = new FormData();
-    formData.append('image', image as any); // Append image file
-    formData.append('mask', mask as any); // Append mask file
+    formData.append('original', image as any); // Append image file
+    formData.append('masked', mask as any); // Append mask file
     formData.append('type', type); // Append type
     formData.append('room', roomType); // Append room
     formData.append('color', color); // Append color

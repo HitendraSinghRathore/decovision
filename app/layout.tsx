@@ -4,7 +4,7 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'Deco Vision',
+  title: 'Room Remix',
   description: 'App to help you decorate your home with AI',
   keywords: 'decoration, home design, AI, interior design',
   robots: 'index, follow',
