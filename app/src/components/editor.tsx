@@ -52,6 +52,7 @@ export default function EditorComponent(props:any) {
 
     const renderImage = (context:CanvasRenderingContext2D, image:HTMLImageElement) => {
         const canvas:HTMLCanvasElement = canvasRef.current as HTMLCanvasElement;
+       
         canvas.height = image.height;
         canvas.width = image.width;
         context.drawImage(image,  canvas.width / 2 - image.width / 2,canvas.height / 2 - image.height / 2);
@@ -75,13 +76,14 @@ export default function EditorComponent(props:any) {
         const context:any = current.getContext('2d');
         prevPoint.current = null;
         props.reset();
+
         renderImage(context,props.orignalImage);
     }
     const toggleEdit = (value:boolean) => {
         if(!value) {
             //update the image with the mask
             const canvas:HTMLCanvasElement =  canvasRef.current as HTMLCanvasElement;
-            const imgUrl = canvas.toDataURL("image/jpeg");
+            const imgUrl = canvas.toDataURL("image/png");
             const blob = dataURLtoBlob(imgUrl);
             const img = new Image();
             img.src = imgUrl;

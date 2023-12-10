@@ -4,9 +4,7 @@ import { useDropzone } from 'react-dropzone';
 import Spinner from "./spinner";
 import { toast } from 'react-toastify';
 import EditorComponent from "./editor";
-interface IImageComponent {
 
-}
 export default function ImageComponent(props:any) {
     const [orignalImgae, setOrignalImage] = useState<File>();
     const [orignalImg, setOrignalImg] = useState<HTMLElement>();
@@ -27,7 +25,7 @@ export default function ImageComponent(props:any) {
     }, [orignalImgae])
     const upload = (files: any) => {
         if (!files.length) {
-            toast.error('Please upload a valid file');
+            toast.error('Please upload a valid image(png) file');
             return;
         }
         props.setImage(files[0]);
@@ -37,8 +35,7 @@ export default function ImageComponent(props:any) {
         noClick: true,
         maxFiles: 1,
         accept: {
-            'image/png': ['.png'],
-            'image/jpeg': ['.jpg', '.jpeg'],
+            'image/png': ['.png']
 
         },
         onDrop: files => upload(files)

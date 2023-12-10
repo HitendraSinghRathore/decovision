@@ -21,6 +21,7 @@ const config: Config = {
         dark2: '#131016',
         dark4: '#1f1b24',
         dark3: '#35323a',
+        darkLight: '#4c4950',
         borderLight: '#625f66',
         white: '#ffffff',
         black: '#000000',
